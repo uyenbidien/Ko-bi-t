@@ -6,7 +6,7 @@
          font-weight: normal;
          font-size: 12pt;}
           
-.conterner{
+.container{
          display: flex;
          flex-direction: column;
          height: 100vh;
