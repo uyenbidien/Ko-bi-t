@@ -6,13 +6,13 @@
    <body>
    <p id="kq"> </p>
    <script> 
-      let pp = URLSearchParams(window.location.search);
-      let ten = params.get("txtTen");
-      let dc = params.get("txtTen");
-      let yk = params.get("txtComment");
+      let pp = new URLSearchParams(window.location.search);
+      let ten = pp.get("txtTen");
+      let dc = pp.get("txtTen");
+      let yk = pp.get("txtComment");
       document.getElementById("kq").innerHTML = "Cảm ơn bạn" + ten + "email: " + dc + "đã góp ý <br><br> Chúng tôi xin ghi nhận ý kiến của bạn như sau:<br>" + yk;
    </script>
-      <form action="danhgia.html" method="GET">
+      <form action="donggop.html" method="GET">
       <div class="noidung">
         <h3>Cám ơn bạn đã góp ý</h3>
         <p>Chúng tôi xin ghi nhận ý kiến của bạn và sẽ cải tiến, nâng cao chất lượng phục vụ hơn nữa trong thời gian sắp tới.</p>
