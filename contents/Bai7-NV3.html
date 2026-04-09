@@ -8,12 +8,14 @@
    <p id="kq"> </p>
    <script> 
       let pp = new URLSearchParams(window.location.search);
-      let ten = pp.get("txtTen");
-      let dc = pp.get("txtEmail");
-      let yk = pp.get("txtComment");
-      document.getElementById("kq").innerHTML = "Cảm ơn bạn" + ten + " (email: " + dc + ") đã góp ý <br><br> Chúng tôi xin ghi nhận ý kiến của bạn như sau:<br>" + yk;
+      let ten = pp.get("txtName") || "Khách";
+      let dc = pp.get("txtEmail") || "Không có";
+      let yk = pp.get("txtComment") || "Không có nội dung";
+      document.getElementById("kq").innerHTML = 
+           "Cảm ơn bạn <b>" + ten + "</b> (Email: " + dc + ") đã góp ý. <br><br>" +
+           "Chúng tôi xin ghi nhận ý kiến của bạn như sau:<br><i>" + yk + "</i>";
    </script>
-   <form action="donggop.html" method="GET">
+   <form action="danhgia.html" method="GET">
    <input type ="submit" name = "cmd" value= "Quay lại" >
    </form>
  </body>
