@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset ="utf-8">
+     <link rel="stylesheet" href="style.css">
+</head>
+   <body>
+   <p id="kq"> </p>
+   <script> 
+      let pp = new URLSearchParams(window.location.search);
+      let ten = pp.get("txtName") || "Khách";
+      let dc = pp.get("txtEmail") || "Không có";
+      let yk = pp.get("txtComment") || "Không có nội dung";
+      document.getElementById("kq").innerHTML = 
+           "Cảm ơn bạn <b>" + ten + "</b> (Email: " + dc + ") đã góp ý. <br><br>" +
+           "Chúng tôi xin ghi nhận ý kiến của bạn như sau:<br><i>" + yk + "</i>";
+   </script>
+   <form action="dangky.html" method="GET">
+   <input type ="submit" name = "cmd" value= "Quay lại" >
+   </form>
+ </body>
+</html>
